@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DatabaseUser()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ DatabaseUser\r\n
+comment1.params=baru
+comment1.target=boolean\ addPelanggan(Pelanggan)
+comment2.params=id
+comment2.target=boolean\ removePelanggan(int)
+comment3.params=baru
+comment3.target=boolean\ addOjek(Ojek)
+comment4.params=id
+comment4.target=boolean\ removeOjek(int)
+comment5.params=
+comment5.target=int\ getIDOjekTerakhir()
+comment6.params=
+comment6.target=int\ getIDPelangganTerakhir()
+comment7.params=
+comment7.target=Ojek\ getUserOjek()
+comment8.params=
+comment8.target=Pelanggan\ getUserPelanggan()
+numComments=9

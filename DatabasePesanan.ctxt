@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DatabasePesanan()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ DatabasePesanan\r\n
+comment1.params=pesan
+comment1.target=boolean\ addPesanan(Pesanan)
+comment2.params=pesan
+comment2.target=boolean\ hapusPesanan(Pesanan)
+comment3.params=pengguna
+comment3.target=boolean\ hapusPesanan(Pelanggan)
+comment4.params=
+comment4.target=Pesanan\ getPesanan()
+comment5.params=
+comment5.target=java.lang.String[]\ getDatabase()
+comment6.params=pesan
+comment6.target=void\ pesananDibatalkan(Pesanan)
+comment7.params=pengguna
+comment7.target=void\ pesananDibatalkan(Pelanggan)
+numComments=8

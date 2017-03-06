@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=nama_lokasi\ x\ y\ keterangan_lokasi
+comment0.target=Lokasi(java.lang.String,\ double,\ double,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Lokasi\r\n
+comment1.params=
+comment1.target=double\ getX()
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=
+comment2.target=double\ getY()
+comment3.params=
+comment3.target=java.lang.String\ getNama()
+comment4.params=
+comment4.target=java.lang.String\ getKeteranganLokasi()
+comment5.params=x
+comment5.target=void\ setX(double)
+comment6.params=y
+comment6.target=void\ setY(double)
+comment7.params=nama_lokasi
+comment7.target=void\ setNama(java.lang.String)
+comment8.params=keterangan_lokasi
+comment8.target=void\ setKeteranganLokasi(java.lang.String)
+numComments=9
