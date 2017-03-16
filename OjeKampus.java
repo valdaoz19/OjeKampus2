@@ -2,10 +2,10 @@
 /**
  * <h1>OjeKampus</h1>
  * This is a class to call objects from other class to make 
- * such a simulation about Ojek Kampus application
+ * Ojek Kampus application
  * 
  * @author  Valda Orchidea Zahwa
- * @version 
+ * @6 Maret 2017 
  */
 public class OjeKampus
 {
@@ -51,7 +51,13 @@ public class OjeKampus
        System.out.println("Oz = " + temp);
        temp = Integer.toString(DatabaseUser.getIDPelangganTerakhir());
        System.out.println("Valda = " + temp);   
+       pes_oz.printData();
+       ojek_valda.setNama("Oz");
+       p_oz.setNama("Valda");
+       ojek_valda.printData();
+       p_oz.printData();
+       
     }
-    
+
    
 }

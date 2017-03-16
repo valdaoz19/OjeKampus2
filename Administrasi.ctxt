@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=pesan\ pelayan
+comment0.target=void\ Ditugaskan(Pesanan,\ Ojek)
+comment1.params=pesan\ Pelayan
+comment1.target=void\ ojekAmbilPesanan(Pesanan,\ Ojek)
+comment2.params=Pelayan
+comment2.target=void\ ojekLepasPesanan(Ojek)
+comment3.params=Pelayan
+comment3.target=void\ pesananDibatalkan(Ojek)
+comment4.params=Pelayan
+comment4.target=void\ pesananSelesai(Ojek)
+comment5.params=pesan
+comment5.target=void\ pesananDibatalkan(Pesanan)
+comment6.params=pesan
+comment6.target=void\ pesananSelesai(Pesanan)
+numComments=7

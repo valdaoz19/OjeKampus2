@@ -3,27 +3,48 @@
  * Write a description of class Pesanan here.
  * 
  * @author Valda Orchidea Zahwa 
- * @version (a version number or a date)
+ * @6 Maret 2017 
  */
 public class Pesanan
 {
     // instance variables - replace the example below with your own
-    private static Ojek pelayan = null;
-    private static Pelanggan pengguna;
-    private static String pelanggan_awal;
-    private static String pelanggan_akhir;
-    private static double biaya;
-    private static String layanan;
-    private static Lokasi lokasi_awal;
-    private static Lokasi lokasi_akhir;
-    private static boolean diproses = false;
-    private static boolean dibatalkan = false;
-
+    private Ojek pelayan = null;
+    private Pelanggan pengguna;
+    private String pelanggan_awal;
+    private String pelanggan_akhir;
+    private double biaya;
+    private TipeLayanan layanan;
+    private Lokasi lokasi_awal;
+    private Lokasi lokasi_akhir;
+    private boolean diproses = false;
+    private boolean dibatalkan = false;
     /**
      * Constructor for objects of class Pesanan
      */
-    public Pesanan(Pelanggan pengguna, String layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
-            String pelanggan_awal, String pelanggan_akhir, double biaya)
+    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
+            String pelanggan_awal)
+    {
+        this.pengguna = pengguna;
+        this.layanan = layanan;
+        this.lokasi_awal = lokasi_awal;
+        this.lokasi_akhir = lokasi_akhir;
+        this.pelanggan_awal = pelanggan_awal;
+    }
+      
+     public Pesanan(Pelanggan pengguna, TipeLayanan layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
+            String pelanggan_awal, String biayapelanggan_akhir)
+    {
+        this.pengguna = pengguna;
+        this.layanan = layanan;
+        this.lokasi_awal = lokasi_awal;
+        this.lokasi_akhir = lokasi_akhir;
+        this.pelanggan_awal = pelanggan_awal;
+        this.pelanggan_akhir = pelanggan_akhir;
+ 
+    }
+    
+     public Pesanan(Pelanggan pengguna, TipeLayanan layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
+            String pelanggan_awal, String biayapelanggan_akhir, double biaya)
     {
         this.pengguna = pengguna;
         this.layanan = layanan;
@@ -33,7 +54,6 @@ public class Pesanan
         this.pelanggan_akhir = pelanggan_akhir;
         this.biaya = biaya;
     }
-       
     public void pesananDiambil(Ojek pelayan){
         
     }
@@ -61,7 +81,7 @@ public class Pesanan
         return lokasi_akhir;
     }
     
-    public String getTipeLayanan(){
+    public TipeLayanan getTipeLayanan(){
         return layanan;
     }
     
@@ -75,6 +95,44 @@ public class Pesanan
     
     public double getBiaya(){
         return biaya;
+    }
+    
+    public void setPelayan(Ojek pelayan){
+        
+    }
+    
+    public void setPelanggan(Pelanggan pengguna){
+        
+    }
+    
+    public void setPenggunaAwal(String pelanggan_awal){
+    
+    }
+    
+    public void setPenggunaAkhir(String pelanggan_akhir){
+        
+    }
+    
+    public void setBiaya(double biaya){
+    
+    }
+    
+    public void setTipeLayanan(TipeLayanan layanan){
+    
+    }
+    
+    public void setLokasiAwal(Lokasi lokasi_awal){
+        
+    }
+    
+    public void setLokasiAkhir(Lokasi lokasi_akhir){
+    }
+    
+    public void setStatusDiproses(Boolean diproses){
+    }
+    
+    public void setStatusSelesai(Boolean selesai){
+        
     }
     
     public void printData(){

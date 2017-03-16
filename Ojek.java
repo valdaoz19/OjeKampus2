@@ -3,7 +3,7 @@
  * Write a description of class Ojek here.
  * 
  * @author (your name) 
- * @version (a version number or a date)
+ * @6 Maret 2017 
  */
 public class Ojek
 {

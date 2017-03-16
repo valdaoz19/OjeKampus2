@@ -2,8 +2,8 @@
 /**
  * Write a description of class Lokasi here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Valda Orchidea Zahwa) 
+ * @6 Maret 2017 
  */
 public class Lokasi
 {

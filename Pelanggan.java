@@ -3,7 +3,7 @@
  * Write a description of class Pelanggan here.
  * 
  * @author Valda Orchidea Zahwa 
- * @version (a version number or a date)
+ * @6 Maret 2017 
  */
 public class Pelanggan
 {

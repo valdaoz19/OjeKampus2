@@ -2,34 +2,29 @@
 /**
  * Write a description of class TipeLayanan here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Valda Orchidea Zahwa) 
+ * @6 Maret 2017 
  */
- 
-   public class TipeLayanan
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class TipeLayanan
-     */
-    public TipeLayanan()
+    public enum TipeLayanan
     {
-        // initialise instance variables
-        x = 0;
+        AntarBarang("Antar Barang"), AntarOrang("Antar Orang"), BeliBarang("Beli Barang");
+        private String deskripsi;
+    
+ private TipeLayanan(String deskripsi)
+    {
+       
+        this.deskripsi = deskripsi;
     }
-
     /**
      * An example of a method - replace this comment with your own
      * 
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public String getStringValue()
     {
-        // put your code here
-        return x + y;
+
+        return deskripsi;
     }
-}
+    }
 
