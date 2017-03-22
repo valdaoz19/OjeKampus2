@@ -7,43 +7,81 @@
  */
 public class DatabasePesanan
 {
+    //Variabel Instance
     private static Pesanan list_pesanan;
 
-
     /**
-     * Constructor for objects of class DatabasePesanan
+     * Constructor yang telah dibuat saat kelas DatabasePesanan dibuat.
      */
     public DatabasePesanan()
     {
-        // initialise instance variables
+        //Belum ada isi yang dibutuhkan
+    }
+
+    public void printData ()
+    {
+       System.out.println("Pesanan" +list_pesanan);
     }
     
-    public static boolean addPesanan(Pesanan pesan){
+    /**
+     * Method untuk Menambahkan pesanan baru
+     * @param pesan untuk menambahkan pesan
+     * @return true = nilai benar jika ada pesanan
+     */
+    public static boolean addPesanan(Pesanan pesan)
+    {
+        list_pesanan = pesan;
+        System.out.println("Pesanan Berhasil Dilakukan");
         return true;
     }
     
-    public static boolean hapusPesanan(Pesanan pesan){
+    /**
+     * Method untuk Menghapus pesanan
+     * @param pesan untuk menghapus pesan
+     * @return true = nilai benar jika pesanan null (tidak ada)
+     */
+    public static boolean hapusPesanan(Pesanan pesan)
+    {
+        list_pesanan = null;
         return true;
     }
     
-    public static boolean hapusPesanan(Pelanggan pengguna){
-        return true;
-    }
-    
-    public static Pesanan getPesanan(){
+    /**
+     * Method untuk Mendapatkan pesanan
+     * @return list_pesanan = nilai pesanan
+     */
+    public static Pesanan getPesanan()
+    {
         return list_pesanan;
     }
     
-    public static String[] getDatabase(){
-        return new String[10];
+    /**
+     * Method pada UML lama belum didefinisikan
+     */
+    public static boolean hapusPesananPengguna(String pengguna)
+    {
+        return false;
     }
     
-    public static void pesananDibatalkan(Pesanan pesan){
-        
+    /**
+     * Method pada UML lama belum didefinisikan
+     */
+    public static String[] getDatabase()
+    {
+        return null;
     }
     
-    public static void pesananDibatalkan(Pelanggan pengguna){
-        
+    /**
+     * Method pada UML lama belum didefinisikan
+     */
+    public static void pesananDibatalkan(String pesan)
+    {
     }
     
+    /**
+     * Method pada UML lama belum didefinisikan
+     */
+    public static void pesananDibatalkanPengguna(String pengguna)
+    {
+    }
 }

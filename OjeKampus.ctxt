@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=OjeKampus()
+comment0.text=\r\n\ Constructor\ dari\ class\ ojekampus\ yang\ terbuat\ bila\ kelas\ dibuat.\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ Method\ main\r\n\ Method\ main\ atau\ utama\ dari\ projek\ ojekampus.\r\n\ @param\ \ String[]\ args\ untuk\ membuat\ main\ agar\ bisa\ dijalankan\ pada\ terminal.\r\n
 numComments=2

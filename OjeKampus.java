@@ -9,55 +9,56 @@
  */
 public class OjeKampus
 {
-    public OjeKampus ()
-    {
-        
-    }
+    //Variabel Instance
+    public static Ojek ojek_valda;
+    public static DatabaseUser ojek_database;
+    public static Lokasi ojek_lokasi;
+    public static Pelanggan p_oz;
+    public static DatabasePesanan p_database;
+    public static Lokasi per_oz_awal;
+    public static Lokasi per_oz_akhir;
+    public static Pesanan pes_oz;
+    public static Administrasi administrasi;
+    private TipeLayanan layanan;
     
-    public static void main (String[] args )
+    
+    /**
+     * Constructor dari class ojekampus yang terbuat bila kelas dibuat.
+     */
+    public OjeKampus()
     {
-     /*
-        Pelanggan pelanggan1 = new Pelanggan();
-        pelanggan1.setID(84);
-        pelanggan1.setNama("Valda");
-        temp = Integer.toString(pelanggan1.getID());
-        System.out.println("Pelanggan1:");
-        System.out.println("ID = " + temp);
-        System.out.println("Nama = " + pelanggan1.getNama());
         
-        Ojek ojek1 = new Ojek();
-        ojek1.setID(14);
-        ojek1.setNama("Oz");
-        temp2 = Integer.toString(ojek1.getID());
-        System.out.println("\nOjek1:");
-        System.out.println("ID = " + temp2);
-        System.out.println("Nama = " + ojek1.getNama());
-        */
-       Lokasi mLokasi;
-       Ojek ojek_valda = new Ojek(DatabaseUser.getIDOjekTerakhir(), "Valda", 
-            mLokasi = new Lokasi("FT", 14, 06, "Halte"));
-       Pelanggan p_oz = new Pelanggan(DatabaseUser.getIDPelangganTerakhir(), "Oz");
-       Lokasi per_oz_awal = new Lokasi("Kutek", 6, 0, "Al-hikam");
-       Lokasi per_oz_akhir = new Lokasi("Pondok Cina", 5, 4, "Stasiun Pondok Cina");
-       Pesanan pes_oz = new Pesanan(p_oz, "Cepat", per_oz_awal,
-            per_oz_akhir, "aye", "dito", 5000);
-       DatabaseUser.addOjek(ojek_valda);
-       DatabaseUser.addPelanggan(p_oz);
-       DatabasePesanan.addPesanan(pes_oz);
-       
-       String temp;
-       temp = Integer.toString(DatabaseUser.getIDOjekTerakhir());
-       System.out.println("Data : ");
-       System.out.println("Oz = " + temp);
-       temp = Integer.toString(DatabaseUser.getIDPelangganTerakhir());
-       System.out.println("Valda = " + temp);   
-       pes_oz.printData();
-       ojek_valda.setNama("Oz");
-       p_oz.setNama("Valda");
-       ojek_valda.printData();
-       p_oz.printData();
-       
     }
 
-   
+    /**
+     * Method main
+     * Method main atau utama dari projek ojekampus.
+     * @param  String[] args untuk membuat main agar bisa dijalankan pada terminal.
+     */
+    public static void main(String[] args)
+    {
+        ojek_database = new DatabaseUser();
+        ojek_lokasi = new Lokasi(14,06,"Kutek","Depok");
+        ojek_valda = new Ojek(ojek_database.getIDOjekTerakhir(),"valda", ojek_lokasi);
+        p_database = new DatabasePesanan();
+        p_oz = new Pelanggan(ojek_database.getIDPelangganTerakhir(),"oz");
+        per_oz_awal = new Lokasi(5,3,"Jurasik","Depok");
+        per_oz_akhir = new Lokasi(2,0,"Kampus","Depok");
+        pes_oz = new Pesanan(p_oz, TipeLayanan.AntarOrang, per_oz_awal, per_oz_akhir,
+        "Fariz", "Aye", 10000);
+        ojek_database.addOjek(ojek_valda);
+        ojek_database.addPelanggan(p_oz);
+        p_database.addPesanan(pes_oz);
+        administrasi = new Administrasi();
+        
+       
+        System.out.println(ojek_valda.getNama());
+        System.out.println(p_oz.getNama());
+        ojek_valda.setNoPlat("S4598J");
+        System.out.println(ojek_valda.getNoPlat());
+        ojek_valda.setTelefon("081382226439");
+        System.out.println(ojek_valda.getTelefon());
+        ojek_valda.setDOB(05,01,1996);
+        System.out.println("Tanggal Lahir "+ojek_valda.getDOB().toString());
+    }
 }

@@ -2,8 +2,8 @@
 /**
  * Write a description of class StatusOjek here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Valda Orchidea Z) 
+ * @version (20 Maret 2017)
  */
 public enum StatusOjek
 {
@@ -15,8 +15,8 @@ public enum StatusOjek
         this.deskripsi = deskripsi;
     }
 
-    public String getStringValue()
+    public String toString()
     {
-        return deskripsi;
+        return this.deskripsi;
     }
 }

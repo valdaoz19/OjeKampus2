@@ -1,18 +1,28 @@
 #BlueJ class context
 comment0.params=id\ nama
 comment0.target=Pelanggan(int,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Pelanggan\r\n
-comment1.params=y
-comment1.target=int\ sampleMethod(int)
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment0.text=\r\n\ Constructor\ yang\ telah\ dibuat\ saat\ kelas\ Pelanggan\ dibuat\ berisi\ nama\ dan\ id.\r\n\ @param\ id\ untuk\ id\ pelanggan\r\n\ @param\ nama\ untuk\ nama\ pelanggan\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ Method\ printData\ untuk\ menampilkan\ data\ dari\ pelanggan.\r\n
 comment2.params=
 comment2.target=int\ getID()
+comment2.text=\r\n\ Method\ untuk\ Mendapatkan\ ID\ pelanggan\r\n\ @return\ id\ \=\ nilai\ ID\ pelanggan\r\n
 comment3.params=
 comment3.target=java.lang.String\ getNama()
-comment4.params=id
-comment4.target=void\ setID(int)
-comment5.params=nama
-comment5.target=void\ setNama(java.lang.String)
-comment6.params=
-comment6.target=void\ printData()
-numComments=7
+comment3.text=\r\n\ Method\ untuk\ Mendapatkan\ nama\ pelanggan\r\n\ @return\ inama\ \=\ nilai\ nama\ pelanggan\r\n
+comment4.params=
+comment4.target=java.util.Date\ getDOB()
+comment5.params=id
+comment5.target=void\ setID(int)
+comment5.text=\r\n\ Method\ untuk\ Men-set\ id\ pelanggan\r\n\ @param\ id\ untuk\ id\ pelanggan\r\n
+comment6.params=nama
+comment6.target=void\ setNama(java.lang.String)
+comment6.text=\r\n\ Method\ untuk\ Men-set\ nama\ pelanggan\r\n\ @param\ nama\ untuk\ nama\ pelanggan\r\n
+comment7.params=day\ month\ year
+comment7.target=void\ setDOB(int,\ int,\ int)
+comment8.params=telefon
+comment8.target=boolean\ setTelefon(java.lang.String)
+comment9.params=email
+comment9.target=boolean\ setEmail(java.lang.String)
+numComments=10

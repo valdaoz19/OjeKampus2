@@ -7,40 +7,65 @@
  */
 public class Administrasi
 {
-    public void Ditugaskan(Pesanan pesan, Ojek pelayan)
+    // instance variables - replace the example below with your own
+    /**
+     * Constructor for objects of class Administrasi
+     */
+    public Administrasi()
     {
-        // initialise instance variables
-        
     }
 
-    public void ojekAmbilPesanan(Pesanan pesan, Ojek Pelayan)
+    public static void pesananDitugaskan(Pesanan pesan, Ojek pelayan)
     {
-        // put your code here
-      
+        pesan.setStatusSelesai(false);
+        pesan.setStatusDiproses(true);
+        pesan.setPelayan(pelayan);
+        ojekAmbilPesanan(pesan,pelayan);
     }
-    public void ojekLepasPesanan(Ojek Pelayan)
+    
+    public static void ojekAmbilPesanan(Pesanan pesan, Ojek pelayan)
     {
-        // put your code here
-      
+       pelayan.setStatus(StatusOjek.Jemput);
+       pelayan.setPesanan(pesan);
     }
-    public void pesananDibatalkan(Ojek Pelayan)
+    
+    public static void ojekLepasPesanan(Ojek pelayan)
     {
-        // put your code here
-      
+        pelayan.setStatus(StatusOjek.Idle);
+        pelayan.setPesanan(null);
     }
-    public void pesananSelesai(Ojek Pelayan)
+    
+    public static void pesananDibatalkan(Ojek pelayan)
     {
-        // put your code here
-      
+        Pesanan pesan = pelayan.getPesanan();
+        pesan.setStatusSelesai(false);
+        pesan.setStatusDiproses(false);
+        pesan.setPelayan(null);
+        ojekLepasPesanan(pelayan);
     }
-    public void pesananDibatalkan(Pesanan pesan)
+    
+    public static void pesananSelesai(Ojek pelayan)
     {
-        // put your code here
-      
+        Pesanan pesan = pelayan.getPesanan();
+        pesan.setStatusSelesai(true);
+        pesan.setStatusDiproses(false);
+        pesan.setPelayan(null);
+        ojekLepasPesanan(pelayan);
     }
-    public void pesananSelesai(Pesanan pesan)
+    
+    public static void pesananDibatalkan(Pesanan pesan)
     {
-        // put your code here
-      
+        ojekLepasPesanan(pesan.getPelayan());
+        pesan.setStatusDiproses(false);
+        pesan.setStatusSelesai(false);
+        pesan.setPelayan(null);
+    }
+    
+    public static void pesananSelesai(Pesanan pesan)
+    {
+        ojekLepasPesanan(pesan.getPelayan());
+        pesan.setStatusDiproses(true);
+        pesan.setStatusSelesai(false);
+        pesan.setPelayan(null);
     }
 }

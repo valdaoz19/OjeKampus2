@@ -1,4 +1,8 @@
 
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.Date;
+import java.util.GregorianCalendar;
 /**
  * Write a description of class Pelanggan here.
  * 
@@ -7,53 +11,118 @@
  */
 public class Pelanggan
 {
-    // instance variables - replace the example below with your own
-    private int x;
-    int id;
-    String nama;
+    //Variabel Instance
+    private int id;
+    private String nama, telefon, email;
+    private Date dob;
 
     /**
-     * Constructor for objects of class Pelanggan
-    */ 
+     * Constructor yang telah dibuat saat kelas Pelanggan dibuat berisi nama dan id.
+     * @param id untuk id pelanggan
+     * @param nama untuk nama pelanggan
+     */
     public Pelanggan(int id, String nama)
     {
+        // initialise instance variables
         this.id = id;
         this.nama = nama;
     }
-
+    
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Method printData untuk menampilkan data dari pelanggan.
      */
-    public int sampleMethod(int y)
+    //public void printData()
+    //{
+    //    System.out.println("Pelanggan dengan nama "+nama+" dan ID "+id+" telefon: "+telefon+" Email: "+email+" DOB: "+dob);
+    //}
+
+    public String toString()
     {
-        // put your code here
-        return x + y;
+        if(DatabasePesanan.getPesanan().equals(null))
+        {
+            return nama + id + telefon;
+        }
+        else
+        {
+            return nama + id + telefon + DatabasePesanan.getPesanan().getPenggunaAkhir();
+        }
     }
     
-    public int getID(){
+    /**
+     * Method untuk Mendapatkan ID pelanggan
+     * @return id = nilai ID pelanggan
+     */
+    public int getID()
+    {
+        // put your code here
         return id;
     }
     
-    public String getNama(){
+    /**
+     * Method untuk Mendapatkan nama pelanggan
+     * @return inama = nilai nama pelanggan
+     */
+    public String getNama()
+    {
         return nama;
     }
     
-    public void setID(int id){
-        this.id = id; 
+    public Date getDOB()
+    {
+        return dob;
     }
     
-    public void setNama(String nama){
+    /**
+     * Method untuk Men-set id pelanggan
+     * @param id untuk id pelanggan
+     */
+    public void setID(int id)
+    {
+        this.id = id;
+    }
+    
+    /**
+     * Method untuk Men-set nama pelanggan
+     * @param nama untuk nama pelanggan
+     */
+    public void setNama(String nama)
+    {
         this.nama = nama;
     }
     
-    public void printData(){
-        String temp;
-        temp = Integer.toString(id);
-        System.out.println("Pelanggan:");
-        System.out.println("ID = " + temp);
-        System.out.println("Nama = " + nama);
+    public void setDOB(int day, int month, int year)
+    {
+        dob = new GregorianCalendar(year,month,day).getTime();
     }
+    
+    public boolean setTelefon(String telefon)
+    {
+        Pattern pattern = Pattern.compile("\\d{10,12}");
+        Matcher matcher = pattern.matcher(telefon);
+        if(matcher.matches())
+        {
+            this.telefon = telefon;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    public boolean setEmail(String email)
+    {
+        Pattern pattern = Pattern.compile("(.)+(@)(.)+\\.(.)+");
+        Matcher matcher = pattern.matcher(email);
+        this.email=email;
+        if(matcher.matches())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
 }

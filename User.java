@@ -8,38 +8,40 @@
 public class User
 {
     // instance variables - replace the example below with your own
-    private int x;
+    protected int id;
+    protected String nama;
 
     /**
      * Constructor for objects of class User
      */
-    public User()
+    public User(int id, String nama)
     {
         // initialise instance variables
-        x = 0;
+        
     }
 
-    protected int id;
-    protected String nama;
-    
-    public void User(int id, String nama){
-        
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public int getID()
+    {
+        // put your code here
+        return 0;
     }
     
-    public int getID(){
-        int i = 0;
-        return i;
+    public String getNama()
+    {
+        return null;
     }
     
-    public String getNama(){
-        return new String();
+    public void setID(int id)
+    {
     }
     
-    public void setID(int id){
-        
-    }
-    
-    public void setNama(String nama){
-        
+    public void setNama(String Nama)
+    {
     }
 }

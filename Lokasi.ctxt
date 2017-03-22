@@ -1,22 +1,32 @@
 #BlueJ class context
-comment0.params=nama_lokasi\ x\ y\ keterangan_lokasi
-comment0.target=Lokasi(java.lang.String,\ double,\ double,\ java.lang.String)
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Lokasi\r\n
+comment0.params=x\ y\ nama_lokasi\ keterangan_lokasi
+comment0.target=Lokasi(double,\ double,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ yang\ telah\ dibuat\ saat\ kelas\ Lokasi\ dibuat\ berisi\ koordinat,\ nama\ dan\ keterangan.\r\n\ @param\ x\ untuk\ koordinat\ x\r\n\ @param\ y\ untuk\ koordinat\ y\r\n\ @param\ nama_lokasi\ untuk\ nama\ lokasi\r\n\ @param\ keterangan_lokasi\ untuk\ keterangan_lokasi\r\n
 comment1.params=
-comment1.target=double\ getX()
-comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ Method\ toString\ digunakan\ untuk\ dapat\ menampilkan\ lokasi\ agar\ berubah\ menjadi\ string.\r\n
 comment2.params=
-comment2.target=double\ getY()
+comment2.target=double\ getX()
+comment2.text=\r\n\ Method\ untuk\ Mendapatkan\ koordinat\ X\r\n\ @return\ x\ \=\ nilai\ koordinat\ X\r\n
 comment3.params=
-comment3.target=java.lang.String\ getNama()
+comment3.target=double\ getY()
+comment3.text=\r\n\ Method\ untuk\ Mendapatkan\ koordinat\ Y\r\n\ @return\ y\ \=\ nilai\ koordinat\ Y\r\n
 comment4.params=
-comment4.target=java.lang.String\ getKeteranganLokasi()
-comment5.params=x
-comment5.target=void\ setX(double)
-comment6.params=y
-comment6.target=void\ setY(double)
-comment7.params=nama_lokasi
-comment7.target=void\ setNama(java.lang.String)
-comment8.params=keterangan_lokasi
-comment8.target=void\ setKeteranganLokasi(java.lang.String)
-numComments=9
+comment4.target=java.lang.String\ getNama()
+comment4.text=\r\n\ Method\ untuk\ Mendapatkan\ nama\ lokasi\r\n\ @return\ nama_lokasi\ \=\ nilai\ nama\ lokasi\r\n
+comment5.params=
+comment5.target=java.lang.String\ getKeteranganLokasi()
+comment5.text=\r\n\ Method\ untuk\ Mendapatkan\ keterangan\ lokasi\r\n\ @return\ keterangan_lokasi\ \=\ nilai\ keterangan\ lokasi\r\n
+comment6.params=x
+comment6.target=void\ setX(double)
+comment6.text=\r\n\ Method\ untuk\ Men-set\ koordinat\ X\r\n\ @param\ x\ untuk\ koordinat\ X\r\n
+comment7.params=y
+comment7.target=void\ setY(double)
+comment7.text=\r\n\ Method\ untuk\ Men-set\ koordinat\ Y\r\n\ @param\ y\ untuk\ koordinat\ Y\r\n
+comment8.params=nama_lokasi
+comment8.target=void\ setNama(java.lang.String)
+comment8.text=\r\n\ Method\ untuk\ Men-set\ nama\ lokasi\r\n\ @param\ nama_lokasi\ untuk\ nama\ lokasi\r\n
+comment9.params=keterangan_lokasi
+comment9.target=void\ getKeteranganLokasi(java.lang.String)
+comment9.text=\r\n\ Method\ untuk\ Men-set\ keterangan\ lokasi\r\n\ @param\ keterangan_lokasi\ untuk\ keterangan\ lokasi\r\n
+numComments=10
