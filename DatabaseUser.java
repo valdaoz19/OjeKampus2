@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class DatabaseUser here.
  * 
@@ -8,8 +8,8 @@
 public class DatabaseUser
 {
     //Variabel Instance
-    private static Pelanggan pelanggan_database;
-    private static Ojek ojek_database;
+    private static ArrayList<Pelanggan>  pelanggan_database = new ArrayList<>();
+    private static ArrayList<Ojek>  ojek_database = new ArrayList<>();
     private static int id_ojek_terakhir=1;
     private static int id_pelanggan_terakhir=1;
 
@@ -20,11 +20,23 @@ public class DatabaseUser
     {
         //Belum ada isi yang dibutuhkan
     }
-
-    public void printData ()
-    {
-       System.out.println("Ojek" +ojek_database);
-       System.out.println("Pelanggan" +pelanggan_database);
+    
+    /**
+     * Method untuk mendapatkan database dari ojek pada arraylist
+     * @return mengembalikan nilai dari ojek_database untuk dimasukkan dalam
+     * database
+     */
+    public static ArrayList<Ojek> getOjekDatabase(){
+        return ojek_database;
+    }
+    
+    /**
+     * Method untuk mendapatkan database dari pelanggan pada arraylist
+     * @return mengembalikan nilai dari pelanggan_database untuk dimasukkan dalam
+     * database
+     */
+    public static ArrayList<Pelanggan> getPelangganDatabase(){
+        return pelanggan_database;
     }
     
     /**
@@ -34,9 +46,14 @@ public class DatabaseUser
      */
     public static boolean addPelanggan(Pelanggan baru)
     {
-        // put your code here
-        pelanggan_database = baru;
-        System.out.println("Penambahan Pelanggan Berhasil");
+        for(Pelanggan pengguna_temp : pelanggan_database){
+            if(pengguna_temp.equals(baru)){
+                System.out.println("Penambahan pelanggan gagal");
+                 return false;
+            }
+        }
+        pelanggan_database.add(baru);
+        System.out.println("Penambahan pelanggan berhasil");
         return true;
     }
     
@@ -47,7 +64,13 @@ public class DatabaseUser
      */
     public static boolean removePelanggan(int id)
     {
-        pelanggan_database = null;
+        Pelanggan pengguna_temp = getUserPelanggan(id);
+        if(pengguna_temp == null){
+            System.out.println("ID tidak terdaftar, penghapusan gagal");
+            return false;
+        }
+        pelanggan_database.remove(pengguna_temp);
+        System.out.println("Penghapusan Pelanggan dengan id " + id + " Berhasil");
         return true;
     }
     
@@ -58,8 +81,14 @@ public class DatabaseUser
      */
     public static boolean addOjek(Ojek baru)
     {
-        ojek_database = baru;
-        System.out.println("Penambahan Ojek Berhasil");
+        for(Ojek ojek_temp : ojek_database){
+            if(ojek_temp.equals(baru)){
+                System.out.println("Penambahan ojek gagal");
+                 return false;
+            }
+        }
+        ojek_database.add(baru);
+        System.out.println("Penambahan ojek berhasil");
         return true;
     }
     
@@ -70,7 +99,13 @@ public class DatabaseUser
      */
     public static boolean removeOjek(int id)
     {
-        ojek_database = null;
+        Ojek ojek_temp = getUserOjek(id);
+        if(ojek_temp == null){
+            System.out.println("ID tidak terdaftar, penghapusan gagal");
+            return false;
+        }
+        ojek_database.remove(ojek_temp);
+        System.out.println("Penghapusan Ojek dengan id " + id + " Berhasil");
         return true;
     }
     
@@ -96,33 +131,27 @@ public class DatabaseUser
      * Method untuk Mendapatkan id ojek
      * @return ojek_database = nilai id ojek
      */
-    public static Ojek getUserOjek()
+    public static Ojek getUserOjek(int id)
     {
-        return ojek_database;
-    }   
+        for(Ojek ojek_temp : ojek_database){
+            if(ojek_temp.getID() == id){
+                 return ojek_temp;
+            }
+        }
+        return null;
+    }  
     
     /**
      * Method untuk Mendapatkan id pelanggan
      * @return ojek_pelanggan = nilai id pelanggan
      */
-    public static Pelanggan getUserPelanggan()
+    public static Pelanggan getUserPelanggan(int id)
     {
-        return pelanggan_database;
-    }
-
-    /**
-     * Method pada UML lama belum didefinisikan
-     */
-    public static String[] getOjekDatabase()
-    {
-        return null;
-    }
-    
-    /**
-     * Method pada UML lama belum didefinisikan
-     */
-    public static String[] getPelangganDatabase()
-    {
+       for(Pelanggan pengguna_temp : pelanggan_database){
+            if(pengguna_temp.getID() == id){
+                 return pengguna_temp;
+            }
+        }
         return null;
     }
 }

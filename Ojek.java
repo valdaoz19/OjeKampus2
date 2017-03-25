@@ -36,24 +36,17 @@ public class Ojek
     /**
      * Method untuk menampilkan data pada kelas Ojek
      */
-    
-    //public void printData()
-    //{
-    //    System.out.println("Ojek dengan nama "+nama+" dan ID "+id+" memiliki status "+status);
-    //    System.out.println("Ojek berada di Posisi Sekarang = " + posisi_sekarang);
-    //}
-    
-    public String toString()
+    public String toString(){
+    if(pesanan_sekarang == null)
     {
-        if(pesanan_sekarang.equals(null))
-        {
-            return nama + id + status.toString();
-        }
-        else
-        {
-            return nama + id + status.toString() + DatabaseUser.getUserPelanggan().getNama();
-        }
+        return "\nOjek" + " Id: "+id + " Nama: "+ nama + " Status:" + status.toString();
     }
+    else
+    {
+        Pelanggan temp = pesanan_sekarang.getPelanggan();
+        return "\nOjek" + " Id: "+id + " Nama: "+ nama + " Status:" + status.toString() + " Pelanggan:" + temp.getNama();
+    }
+   }
     
     /**
      * Method untuk Men-set ID ojek
@@ -74,6 +67,12 @@ public class Ojek
         this.nama=nama;
     }
     
+    /**
+     * Method untuk Men-set no telefon ojek
+     * @param telefon untuk no telefon ojek baru
+     * @return true mengembalikan nilai betul jika sesuai dengan pattern
+     * @return true mengembalikan salah betul jika tidak sesuai dengan pattern
+     */
     public boolean setTelefon(String telefon)
     {
         Pattern pattern = Pattern.compile("\\d{10,12}");
@@ -89,6 +88,12 @@ public class Ojek
         }
     }
     
+    /**
+     * Method untuk Men-set email ojek
+     * @param email untuk email ojek baru
+     * @return true mengembalikan nilai betul jika sesuai dengan pattern
+     * @return true mengembalikan salah betul jika tidak sesuai dengan pattern
+     */
     public boolean setEmail(String email)
     {
         Pattern pattern = Pattern.compile("(.)+(@)(.)+\\.(.)+");
@@ -104,11 +109,21 @@ public class Ojek
         }
     }
     
+    /**
+     * Method untuk Men-set DOB ojek
+     * @param day,month,year untuk tanggal lahir ojek
+     */
     public void setDOB(int day, int month, int year)
     {
         dob = new GregorianCalendar(year,month,day).getTime();
     }
     
+    /**
+     * Method untuk Men-set no plat ojek
+     * @param no plat untuk no plat ojek baru
+     * @return true mengembalikan nilai betul jika sesuai dengan pattern
+     * @return true mengembalikan salah betul jika tidak sesuai dengan pattern
+     */
     public boolean setNoPlat(String no_plat)
     {
         Pattern pattern = Pattern.compile("[A-Z]\\d{1,4}[A-Z]{1,3}");
@@ -153,28 +168,44 @@ public class Ojek
     
     /**
      * Method untuk Mendapatkan ID ojek
-     * @return id = nilai ID ojek
+     * @return id mengembalikan nilai ID ojek
      */
     public int getID()
     {
         return id;
     }
     
+    /**
+     * Method untuk Mendapatkan no telefon ojek
+     * @return no telefon mengembalikan nilai no telefon ojek
+     */
     public String getTelefon()
     {
         return telefon;
     }
     
+    /**
+     * Method untuk Mendapatkan email ojek
+     * @return email mengembalikan nilai email ojek
+     */
     public String getEmail()
     {
         return email;
     }
     
+    /**
+     * Method untuk Mendapatkan DOB ojek
+     * @return DOB mengembalikan nilai DOB ojek
+     */
     public Date getDOB()
     {
         return dob;
     }
     
+    /**
+     * Method untuk Mendapatkan no plat ojek
+     * @return no plat mengembalikan nilai no plat ojek
+     */
     public String getNoPlat()
     {
         return no_plat;

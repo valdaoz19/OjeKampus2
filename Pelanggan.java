@@ -21,36 +21,28 @@ public class Pelanggan
      * @param id untuk id pelanggan
      * @param nama untuk nama pelanggan
      */
-    public Pelanggan(int id, String nama)
+    public Pelanggan(int id, String nama, String telefon)
     {
         // initialise instance variables
         this.id = id;
         this.nama = nama;
+        this.setTelefon(telefon);
     }
     
     /**
-     * Method printData untuk menampilkan data dari pelanggan.
+     * Method toString untuk menampilkan data dari pelanggan.
      */
-    //public void printData()
-    //{
-    //    System.out.println("Pelanggan dengan nama "+nama+" dan ID "+id+" telefon: "+telefon+" Email: "+email+" DOB: "+dob);
-    //}
-
-    public String toString()
-    {
-        if(DatabasePesanan.getPesanan().equals(null))
-        {
-            return nama + id + telefon;
+    public String toString(){
+        if(DatabasePesanan.getPesanan(this) == null){
+            return "Pelanggan" + " Nama : "+ nama + " Id : "+ id + "No.Tlp : " + telefon + "|";
         }
-        else
-        {
-            return nama + id + telefon + DatabasePesanan.getPesanan().getPenggunaAkhir();
-        }
-    }
+        Pesanan temp = DatabasePesanan.getPesanan(this);
+        return "Pelanggan" + " Nama : "+ nama + " Id : "+ id + "No.Tlp : " + telefon + " Pelanggan Awal :" + temp.getPenggunaAwal() + "|";
+    } 
     
     /**
      * Method untuk Mendapatkan ID pelanggan
-     * @return id = nilai ID pelanggan
+     * @return id mengembalikan nilai ID pelanggan
      */
     public int getID()
     {
@@ -60,13 +52,33 @@ public class Pelanggan
     
     /**
      * Method untuk Mendapatkan nama pelanggan
-     * @return inama = nilai nama pelanggan
+     * @return nama mengembalikan nilai nama pelanggan
      */
     public String getNama()
     {
         return nama;
     }
     
+    /**
+     * Method untuk Mendapatkan no telefon pelanggan
+     * @return telefon mengembalikan nilai no telefon pelanggan
+     */
+    public String getTelefon(){
+        return telefon;
+    }
+    
+    /**
+     * Method untuk Mendapatkan email pelanggan
+     * @return email mengembalikan nilai email pelanggan
+     */
+    public String getEmail(){
+        return email;
+    }
+    
+    /**
+     * Method untuk Mendapatkan dob pelanggan
+     * @return dob mengembalikan nilai dob pelanggan
+     */
     public Date getDOB()
     {
         return dob;

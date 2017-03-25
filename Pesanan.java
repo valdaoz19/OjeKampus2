@@ -16,8 +16,8 @@ public class Pesanan
     private TipeLayanan layanan;
     private Lokasi lokasi_awal;
     private Lokasi lokasi_akhir;
-    private boolean diproses=false;
-    private boolean selesai=false;
+    private boolean diproses;
+    private boolean selesai;
 
    /**
      * Constructor yang telah dibuat saat kelas Pesanan dibuat berisi pelanggan, lokasi, biaya.
@@ -29,8 +29,10 @@ public class Pesanan
      * @param pelanggan_akhir untuk nama pelanggan yang memesan (berbeda bila untuk antar barang)
      * @param biaya untuk biaya yang dibayar
      */
-    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
-                    String pelanggan_awal, String pelanggan_akhir, double biaya)
+    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, 
+                    Lokasi lokasi_awal, Lokasi lokasi_akhir, 
+                    String pelanggan_awal, String pelanggan_akhir, 
+                    double biaya)
     {
         this.pengguna = pengguna;
         this.layanan = layanan;
@@ -41,7 +43,8 @@ public class Pesanan
         this.biaya = biaya;
     }
     
-    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
+    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, 
+                    Lokasi lokasi_awal, Lokasi lokasi_akhir, 
                     String pelanggan_awal)
     {
         this.pengguna = pengguna;
@@ -51,7 +54,8 @@ public class Pesanan
         this.pelanggan_awal = pelanggan_awal;
     }
     
-    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, Lokasi lokasi_awal, Lokasi lokasi_akhir, 
+    public Pesanan(Pelanggan pengguna, TipeLayanan layanan, 
+                    Lokasi lokasi_awal, Lokasi lokasi_akhir, 
                     String pelanggan_awal, String pelanggan_akhir)
     {
         this.pengguna = pengguna;
@@ -65,12 +69,6 @@ public class Pesanan
      /**
      * Method untuk menampilkan data pada kelas Pesanan
      */
-    //public void printData()
-    //{
-    //    System.out.println(pelanggan_awal+" di "+lokasi_awal+" | "+pelanggan_akhir+" di "+lokasi_akhir);
-    //    System.out.println("Menggunakan Layanan = " +layanan+" Status diproses "+diproses+" Status selesai "+selesai);
-    //}
-    
     public String toString()
     {
         String final_status = "KOSONG";
@@ -91,44 +89,51 @@ public class Pesanan
         {
             if(pelanggan_akhir != null)
             {
-                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal + " di " + lokasi_awal.getNama() + " ke " + pelanggan_akhir + " di " + 
-                lokasi_akhir.getNama() + " dengan layanan " + layanan + " status " + final_status + " || ");
+                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal 
+                + " di " + lokasi_awal.getNama() + " ke " + pelanggan_akhir + " di " + 
+                lokasi_akhir.getNama() + " dengan layanan " + layanan + " status " 
+                + final_status + "|");
             }
             else
             {
-                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal + " di " + lokasi_awal.getNama() + " ke " + lokasi_akhir.getNama() + 
-                " dengan layanan " + layanan + " status " + final_status + " || ");
+                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal 
+                + " di " + lokasi_awal.getNama() + " ke " + lokasi_akhir.getNama() + 
+                " dengan layanan " + layanan + " status " 
+                + final_status + "|");
             }
         }
         else
         {
             if(pelanggan_akhir != null)
             {
-                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal + " di " + lokasi_awal.getNama() + " ke " + pelanggan_akhir + " di " + 
-                lokasi_akhir.getNama() + " dengan layanan " + layanan + " status " + final_status + " || Diproses oleh " + pelayan.getNama());
+                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal 
+                + " di " + lokasi_awal.getNama() + " ke " + pelanggan_akhir + " di " + 
+                lokasi_akhir.getNama() + " dengan layanan " + layanan + " status " 
+                + final_status + " | Diproses oleh " + pelayan.getNama());
             }
             else
             {
-                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal + " di " + lokasi_awal.getNama() + " ke "+ lokasi_akhir.getNama() + 
-                " dengan layanan " + layanan + " status " + final_status + " || Diproses oleh " + pelayan.getNama());
+                return ("Dibuat oleh " + pengguna.getNama() + " untuk " + pelanggan_awal 
+                + " di " + lokasi_awal.getNama() + " ke "+ lokasi_akhir.getNama() + 
+                " dengan layanan " + layanan + " status " 
+                + final_status + " | Diproses oleh " + pelayan.getNama());
             }
         }
     }
     
     /**
-     * Method untuk Mendapatkan status pesanan
-     * @return diproses = nilai status pesanan
+     * Method untuk Mendapatkan status diproses
+     * @return diproses mengembalikan nilai status diproses
      */
-    public boolean getStatusPesanan()
-    {
-        return false;
-    }
-    
     public boolean getStatusDiproses()
     {
         return diproses;
     }
     
+    /**
+     * Method untuk Mendapatkan status selesai
+     * @return diproses mengembalikan nilai status selesai
+     */
     public boolean getStatusSelesai()
     {
         return selesai;
@@ -206,51 +211,91 @@ public class Pesanan
         return biaya;
     }
        
+    /**
+     * Method untuk Men-set pelayan (ojek)
+     * @param pelayan untuk pelayan (ojek)
+     */
     public void setPelayan(Ojek pelayan)
     {
         this.pelayan = pelayan;
     }
     
+    /**
+     * Method untuk Men-set pelanggan
+     * @param pengguna untuk pelanggan
+     */
     public void setPelanggan(Pelanggan pengguna)
     {
         this.pengguna = pengguna;
     }
     
+    /**
+     * Method untuk Men-set pelanggan awal
+     * @param pelanggan_awal untuk pelanggan awal
+     */
     public void setPenggunaAwal(String pelanggan_awal)
     {
         this.pelanggan_awal = pelanggan_awal;
     }
     
+    /**
+     * Method untuk Men-set pelanggan akhir
+     * @param pelanggan_akhir untuk pelanggan akhir
+     */
     public void setPenggunaAkhir(String pelanggan_akhir)
     {
         this.pelanggan_akhir = pelanggan_akhir;
     }
     
+    /**
+     * Method untuk Men-set biaya
+     * @param biaya untuk biaya
+     */
     public void setBiaya(double biaya)
     {
         this.biaya = biaya;
     }
     
+    /**
+     * Method untuk Men-set tipe layanan
+     * @param layanan untuk tipe layanan
+     */
     public void setTipeLayanan(TipeLayanan layanan)
     {
         this.layanan = layanan;
     }
     
+    /**
+     * Method untuk Men-set lokasi awal
+     * @param lokasi_awal untuk lokasi awal
+     */
     public void setLokasiAwal(Lokasi lokasi_awal)
     {
         this.lokasi_awal = lokasi_awal;
     }
     
+    /**
+     * Method untuk Men-set lokasi akhir
+     * @param lokasi_akhir untuk lokasi akhir
+     */
     public void setLokasiAkhir(Lokasi lokasi_akhir)
     {
         this.lokasi_akhir = lokasi_akhir;
     }
     
+    /**
+     * Method untuk Men-set status sedang diproses
+     * @param diproses untuk status diproses
+     */
     public void setStatusDiproses(boolean diproses)
     {
         this.diproses = diproses;
     }
     
+    /**
+     * Method untuk Men-set status sudah selesai
+     * @param selesai untuk status selesai
+     */
     public void setStatusSelesai(boolean selesai)
     {
         this.selesai = selesai;

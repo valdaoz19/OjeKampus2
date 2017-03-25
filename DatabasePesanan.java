@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * Write a description of class DatabasePesanan here.
@@ -8,7 +9,7 @@
 public class DatabasePesanan
 {
     //Variabel Instance
-    private static Pesanan list_pesanan;
+    private static ArrayList<Pesanan>  list_pesanan = new ArrayList<>();
 
     /**
      * Constructor yang telah dibuat saat kelas DatabasePesanan dibuat.
@@ -17,71 +18,75 @@ public class DatabasePesanan
     {
         //Belum ada isi yang dibutuhkan
     }
-
-    public void printData ()
-    {
-       System.out.println("Pesanan" +list_pesanan);
-    }
     
     /**
-     * Method untuk Menambahkan pesanan baru
-     * @param pesan untuk menambahkan pesan
-     * @return true = nilai benar jika ada pesanan
+     * Method untuk mendapatkan database dari list pesanan pada arraylist
+     * @return mengembalikan nilai dari list_pesanan untuk dimasukkan dalam
+     * database
      */
-    public static boolean addPesanan(Pesanan pesan)
-    {
-        list_pesanan = pesan;
-        System.out.println("Pesanan Berhasil Dilakukan");
-        return true;
-    }
-    
-    /**
-     * Method untuk Menghapus pesanan
-     * @param pesan untuk menghapus pesan
-     * @return true = nilai benar jika pesanan null (tidak ada)
-     */
-    public static boolean hapusPesanan(Pesanan pesan)
-    {
-        list_pesanan = null;
-        return true;
-    }
-    
-    /**
-     * Method untuk Mendapatkan pesanan
-     * @return list_pesanan = nilai pesanan
-     */
-    public static Pesanan getPesanan()
-    {
+    public static ArrayList<Pesanan> getDatabase(){
         return list_pesanan;
     }
     
     /**
-     * Method pada UML lama belum didefinisikan
+     * Method untuk Mendapatkan pesanan berdasarkan list pesanan pada arraylist yang
+     * telah dibuat jika ada pada list pesanan maka nilainya akan dikembalikan
+     * @return list_pesanan mengembalikan nilai pesan
      */
-    public static boolean hapusPesananPengguna(String pengguna)
+    public static Pesanan getPesanan(Pelanggan pengguna)
     {
+        for(Pesanan pesan : list_pesanan){
+            if(pesan.getPelanggan().equals(pengguna)){
+                 return pesan;
+            }
+        }
+       return null;
+    }
+    
+    /**
+     * Method untuk Menambahkan pesanan baru dari method getPesanan
+     * @param pesan untuk menambahkan pesan
+     * @return true mengembalikan nilai benar jika ada pesanan
+     */
+    public static boolean addPesanan(Pesanan pesan)
+    {
+        Pelanggan pengguna = pesan.getPelanggan();
+        if(getPesanan(pengguna)==null){
+            System.out.println("Pesanan berhasil dilakukan");
+            list_pesanan.add(pesan);
+            return true;
+        }
+        System.out.println("Pesanan gagal");
         return false;
     }
     
     /**
-     * Method pada UML lama belum didefinisikan
+     * Method untuk Menghapus pesanan yang telah dipesan
+     * @param pesan untuk menghapus pesan
+     * @return true mengembalikan nilai salah jika null dan benar jika ada
+     * 
      */
-    public static String[] getDatabase()
+    public static boolean hapusPesanan(Pesanan pesan)
     {
-        return null;
+        if(pesan.getPelayan()== null){
+            return false;
+        }
+        list_pesanan.remove(pesan);
+        return true;
     }
     
     /**
-     * Method pada UML lama belum didefinisikan
+     * Method untuk menghapus pesanan dari method getPesanan
+     * @return list_pesanan mengembalikan nilai pesan
      */
-    public static void pesananDibatalkan(String pesan)
+    public static boolean hapusPesanan(Pelanggan pengguna)
     {
-    }
-    
-    /**
-     * Method pada UML lama belum didefinisikan
-     */
-    public static void pesananDibatalkanPengguna(String pengguna)
-    {
+        Pesanan pesan = getPesanan(pengguna);
+        if(pesan.getPelayan()== null){
+            list_pesanan.remove(pesan);
+            return true;
+        }
+        
+        return false;
     }
 }

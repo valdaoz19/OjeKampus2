@@ -3,35 +3,33 @@ comment0.params=
 comment0.target=DatabaseUser()
 comment0.text=\r\n\ Constructor\ yang\ telah\ dibuat\ saat\ kelas\ DatabaseUser\ dibuat.\r\n
 comment1.params=
-comment1.target=void\ printData()
-comment10.params=
-comment10.target=java.lang.String[]\ getOjekDatabase()
-comment10.text=\r\n\ Method\ pada\ UML\ lama\ belum\ didefinisikan\r\n
-comment11.params=
-comment11.target=java.lang.String[]\ getPelangganDatabase()
-comment11.text=\r\n\ Method\ pada\ UML\ lama\ belum\ didefinisikan\r\n
-comment2.params=baru
-comment2.target=boolean\ addPelanggan(Pelanggan)
-comment2.text=\r\n\ Method\ untuk\ Menambahkan\ pelanggan\ baru\r\n\ @param\ baru\ untuk\ menambahkan\ pelanggan\ baru\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ ada\ pelanggan\ baru\r\n
-comment3.params=id
-comment3.target=boolean\ removePelanggan(int)
-comment3.text=\r\n\ Method\ untuk\ Menghapus\ pelanggan\r\n\ @param\ id\ untuk\ menghapus\ id\ pelanggan\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ id\ pelanggan\ null\ (tidak\ ada)\r\n
-comment4.params=baru
-comment4.target=boolean\ addOjek(Ojek)
-comment4.text=\r\n\ Method\ untuk\ Menambahkan\ ojek\ baru\r\n\ @param\ baru\ untuk\ menambahkan\ ojek\ baru\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ ada\ ojek\ baru\r\n
-comment5.params=id
-comment5.target=boolean\ removeOjek(int)
-comment5.text=\r\n\ Method\ untuk\ Menghapus\ ojek\r\n\ @param\ id\ untuk\ menghapus\ id\ ojek\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ id\ ojek\ null\ (tidak\ ada)\r\n
-comment6.params=
-comment6.target=int\ getIDOjekTerakhir()
-comment6.text=\r\n\ Method\ untuk\ Mendapatkan\ ID\ ojek\ terakhir\r\n\ @return\ id_ojek_terakhir\ \=\ nilai\ id\ ojek\ terakhir\r\n
+comment1.target=java.util.ArrayList\ getOjekDatabase()
+comment1.text=\r\n\ Method\ untuk\ mendapatkan\ database\ dari\ ojek\ pada\ arraylist\r\n\ @return\ mengembalikan\ nilai\ dari\ ojek_database\ untuk\ dimasukkan\ dalam\r\n\ database\r\n
+comment10.params=id
+comment10.target=Pelanggan\ getUserPelanggan(int)
+comment10.text=\r\n\ Method\ untuk\ Mendapatkan\ id\ pelanggan\r\n\ @return\ ojek_pelanggan\ \=\ nilai\ id\ pelanggan\r\n
+comment2.params=
+comment2.target=java.util.ArrayList\ getPelangganDatabase()
+comment2.text=\r\n\ Method\ untuk\ mendapatkan\ database\ dari\ pelanggan\ pada\ arraylist\r\n\ @return\ mengembalikan\ nilai\ dari\ pelanggan_database\ untuk\ dimasukkan\ dalam\r\n\ database\r\n
+comment3.params=baru
+comment3.target=boolean\ addPelanggan(Pelanggan)
+comment3.text=\r\n\ Method\ untuk\ Menambahkan\ pelanggan\ baru\r\n\ @param\ baru\ untuk\ menambahkan\ pelanggan\ baru\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ ada\ pelanggan\ baru\r\n
+comment4.params=id
+comment4.target=boolean\ removePelanggan(int)
+comment4.text=\r\n\ Method\ untuk\ Menghapus\ pelanggan\r\n\ @param\ id\ untuk\ menghapus\ id\ pelanggan\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ id\ pelanggan\ null\ (tidak\ ada)\r\n
+comment5.params=baru
+comment5.target=boolean\ addOjek(Ojek)
+comment5.text=\r\n\ Method\ untuk\ Menambahkan\ ojek\ baru\r\n\ @param\ baru\ untuk\ menambahkan\ ojek\ baru\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ ada\ ojek\ baru\r\n
+comment6.params=id
+comment6.target=boolean\ removeOjek(int)
+comment6.text=\r\n\ Method\ untuk\ Menghapus\ ojek\r\n\ @param\ id\ untuk\ menghapus\ id\ ojek\r\n\ @return\ true\ \=\ nilai\ benar\ jika\ id\ ojek\ null\ (tidak\ ada)\r\n
 comment7.params=
-comment7.target=int\ getIDPelangganTerakhir()
-comment7.text=\r\n\ Method\ untuk\ Mendapatkan\ ID\ pelanggan\ terakhir\r\n\ @return\ id_pelanggan_terakhir\ \=\ nilai\ id\ pelanggan\ terakhir\r\n
+comment7.target=int\ getIDOjekTerakhir()
+comment7.text=\r\n\ Method\ untuk\ Mendapatkan\ ID\ ojek\ terakhir\r\n\ @return\ id_ojek_terakhir\ \=\ nilai\ id\ ojek\ terakhir\r\n
 comment8.params=
-comment8.target=Ojek\ getUserOjek()
-comment8.text=\r\n\ Method\ untuk\ Mendapatkan\ id\ ojek\r\n\ @return\ ojek_database\ \=\ nilai\ id\ ojek\r\n
-comment9.params=
-comment9.target=Pelanggan\ getUserPelanggan()
-comment9.text=\r\n\ Method\ untuk\ Mendapatkan\ id\ pelanggan\r\n\ @return\ ojek_pelanggan\ \=\ nilai\ id\ pelanggan\r\n
-numComments=12
+comment8.target=int\ getIDPelangganTerakhir()
+comment8.text=\r\n\ Method\ untuk\ Mendapatkan\ ID\ pelanggan\ terakhir\r\n\ @return\ id_pelanggan_terakhir\ \=\ nilai\ id\ pelanggan\ terakhir\r\n
+comment9.params=id
+comment9.target=Ojek\ getUserOjek(int)
+comment9.text=\r\n\ Method\ untuk\ Mendapatkan\ id\ ojek\r\n\ @return\ ojek_database\ \=\ nilai\ id\ ojek\r\n
+numComments=11

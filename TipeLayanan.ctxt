@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=deskripsi
 comment0.target=TipeLayanan(java.lang.String)
+comment0.text=\r\n\ Method\ untuk\ mendapatkan\ TipeLayanan\r\n\ @param\ deskripsi\ untuk\ deskripsi\ dari\ enum\ yang\ dibuat\r\n
 comment1.params=
-comment1.target=java.lang.String\ getStringValue()
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ Method\ untuk\ menampilkan\ deskripsi\ yang\ sudah\ dibuat\r\n
 numComments=2
