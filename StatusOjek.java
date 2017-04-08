@@ -7,16 +7,14 @@
  */
 public enum StatusOjek
 {
-    Antar("Mengantar"), Idle("Idle"), Jemput("Jemput");
+    Idle("Idle"),Jemput("Menjemput"),Antar("Mengantar");
     private String deskripsi;
-    private StatusOjek(String deskripsi)
-    {
-       
+    StatusOjek (String deskripsi){
         this.deskripsi = deskripsi;
     }
-
-    public String toString()
-    {
-        return this.deskripsi;
+    
+    public String getIDStatus(){
+        return deskripsi;
     }
+    
 }

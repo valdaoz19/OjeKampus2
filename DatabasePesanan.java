@@ -8,30 +8,17 @@ import java.util.*;
  */
 public class DatabasePesanan
 {
-    //Variabel Instance
+    // instance variables - replace the example below with your own
     private static ArrayList<Pesanan>  list_pesanan = new ArrayList<>();
-
-    /**
-     * Constructor yang telah dibuat saat kelas DatabasePesanan dibuat.
-     */
-    public DatabasePesanan()
-    {
-        //Belum ada isi yang dibutuhkan
-    }
     
-    /**
-     * Method untuk mendapatkan database dari list pesanan pada arraylist
-     * @return mengembalikan nilai dari list_pesanan untuk dimasukkan dalam
-     * database
-     */
     public static ArrayList<Pesanan> getDatabase(){
         return list_pesanan;
     }
     
     /**
-     * Method untuk Mendapatkan pesanan berdasarkan list pesanan pada arraylist yang
-     * telah dibuat jika ada pada list pesanan maka nilainya akan dikembalikan
-     * @return list_pesanan mengembalikan nilai pesan
+     * getPesanan. 
+     * Metode yang akan mengembalikan data pesanan yang terakhir dimasukkan ke database ketika dipanggil.
+     * @return Pesanan list_pesanan   data pesanan yang terakhir dimasukkan ke database.
      */
     public static Pesanan getPesanan(Pelanggan pengguna)
     {
@@ -42,11 +29,12 @@ public class DatabasePesanan
         }
        return null;
     }
-    
+   
     /**
-     * Method untuk Menambahkan pesanan baru dari method getPesanan
-     * @param pesan untuk menambahkan pesan
-     * @return true mengembalikan nilai benar jika ada pesanan
+     * addPesanan. 
+     * Metode untuk menambahkan pesanan pada database serta memberi tahu terdapat penambahan pesanan dalam database.
+     * @param Pesanan pesan    data pesanan yang akan ditambahkan dalam database.
+     * @return true   menandakan penambahan pesanan berhasil dilakukan.
      */
     public static boolean addPesanan(Pesanan pesan)
     {
@@ -59,12 +47,12 @@ public class DatabasePesanan
         System.out.println("Pesanan gagal");
         return false;
     }
-    
+   
     /**
-     * Method untuk Menghapus pesanan yang telah dipesan
-     * @param pesan untuk menghapus pesan
-     * @return true mengembalikan nilai salah jika null dan benar jika ada
-     * 
+     * hapusPesanan. 
+     * Metode untuk menghapus pesanan dari database serta memberi tahu terdapat penghapusan pesanan dalam database.
+     * @param Pesanan pesan    data pesanan yang akan dihapus dalam database.
+     * @return true   menandakan penghapusan pesanan berhasil dilakukan.
      */
     public static boolean hapusPesanan(Pesanan pesan)
     {
@@ -74,11 +62,7 @@ public class DatabasePesanan
         list_pesanan.remove(pesan);
         return true;
     }
-    
-    /**
-     * Method untuk menghapus pesanan dari method getPesanan
-     * @return list_pesanan mengembalikan nilai pesan
-     */
+   
     public static boolean hapusPesanan(Pelanggan pengguna)
     {
         Pesanan pesan = getPesanan(pengguna);

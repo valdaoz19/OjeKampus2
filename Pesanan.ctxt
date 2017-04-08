@@ -1,72 +1,61 @@
 #BlueJ class context
 comment0.params=pengguna\ layanan\ lokasi_awal\ lokasi_akhir\ pelanggan_awal\ pelanggan_akhir\ biaya
 comment0.target=Pesanan(Pelanggan,\ TipeLayanan,\ Lokasi,\ Lokasi,\ java.lang.String,\ java.lang.String,\ double)
-comment0.text=\r\n\ Constructor\ yang\ telah\ dibuat\ saat\ kelas\ Pesanan\ dibuat\ berisi\ pelanggan,\ lokasi,\ biaya.\r\n\ @param\ pengguna\ untuk\ nama\ pengguna\ yang\ memesan\ pesanan\r\n\ @param\ layanan\ untuk\ jenis\ layanan\r\n\ @param\ lokasi_awal\ untuk\ lokasi\ awal\ \r\n\ @param\ lokasi_akhir\ untuk\ lokasi\ akhir\r\n\ @param\ pelanggan_awal\ untuk\ nama\ pelanggan\ yang\ memesan\r\n\ @param\ pelanggan_akhir\ untuk\ nama\ pelanggan\ yang\ memesan\ (berbeda\ bila\ untuk\ antar\ barang)\r\n\ @param\ biaya\ untuk\ biaya\ yang\ dibayar\r\n
+comment0.text=\r\n\ Constructor\ Pesanan.\ \r\n\ Metode\ yang\ pertama\ kali\ dipanggil\ ketika\ sebuah\ object\ dari\ kelas\ pesanan\ diciptakan.\r\n\ @param\ Pelanggan\ pengguna\ \ \ \ Pelanggan\ yang\ memesan\ Pesanan.\r\n\ @param\ String\ layanan\ \ nama\ pelanggan\ untuk\ object\ pelanggan\ baru.\r\n\ @param\ Lokasi\ lokasi_awal\ \ \ \ lokasi\ awal\ dari\ sebuah\ pesanan.\ \r\n\ @param\ Lokasi\ lokasi_akhir\ \ \ lokasi\ tujuan\ dari\ sebuah\ pesanan.\r\n\ @param\ String\ pelanggan_awal\ \ \ \ \ nama\ dari\ pelanggan\ yang\ akaan\ diantar/memberikan\ barang\ untuk\ diantar.\r\n\ @param\ String\ pelanggan_akhir\ \ \ \ nama\ dari\ pelanggan\ yang\ akaan\ diantar/diberikan\ barang\ yang\ diantar.\r\n\ @param\ double\ biaya\ \ biaya\ layanan\ dari\ sebuah\ pesanan.\r\n
 comment1.params=pengguna\ layanan\ lokasi_awal\ lokasi_akhir\ pelanggan_awal
 comment1.target=Pesanan(Pelanggan,\ TipeLayanan,\ Lokasi,\ Lokasi,\ java.lang.String)
 comment10.params=
 comment10.target=TipeLayanan\ getTipeLayanan()
-comment10.text=\r\n\ Method\ untuk\ Mendapatkan\ tipe\ layanan\r\n\ @return\ layanan\ \=\ nilai\ tipe\ layanan\r\n
+comment10.text=\r\n\ getTipeLayanan.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ jenis\ layanan\ dari\ pesanan\ ketika\ dipanggil.\r\n\ @return\ String\ layanan\ \ jenis\ layanan\ dari\ pesanan\ .\r\n
 comment11.params=
 comment11.target=java.lang.String\ getPenggunaAwal()
-comment11.text=\r\n\ Method\ untuk\ Mendapatkan\ nama\ pengguna\ awal\r\n\ @return\ pelanggan_awal\ \=\ nilai\ pengguna\ awal\r\n
+comment11.text=\r\n\ getPenggunaAwal.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ nama\ pelanggan\ awal\ dari\ pesanan\ ketika\ dipanggil.\r\n\ @return\ String\ pelanggan_awal\ \ nama\ pelanggan\ awal\ dari\ pesanan\ .\r\n
 comment12.params=
 comment12.target=java.lang.String\ getPenggunaAkhir()
-comment12.text=\r\n\ Method\ untuk\ Mendapatkan\ nama\ pengguna\ akhir\r\n\ @return\ pelanggan_akhir\ \=\ nilai\ pengguna\ akhir\r\n
+comment12.text=\r\n\ getPenggunaAkhir.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ nama\ pelanggan\ akhir\ dari\ pesanan\ ketika\ dipanggil.\r\n\ @return\ String\ pelanggan_awal\ \ nama\ pelanggan\ akhir\ dari\ pesanan\ .\r\n
 comment13.params=
 comment13.target=double\ getBiaya()
-comment13.text=\r\n\ Method\ untuk\ Mendapatkan\ biaya\ \r\n\ @return\ biaya\ \=\ nilai\ biaya\r\n
+comment13.text=\r\n\ getBiaya.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ jumlah\ biaya\ pesanan\ ketika\ dipanggil.\r\n\ @return\ int\ biaya\ \ \ jumlah\ biaya\ pesanan.\r\n
 comment14.params=pelayan
 comment14.target=void\ setPelayan(Ojek)
-comment14.text=\r\n\ Method\ untuk\ Men-set\ pelayan\ (ojek)\r\n\ @param\ pelayan\ untuk\ pelayan\ (ojek)\r\n
 comment15.params=pengguna
 comment15.target=void\ setPelanggan(Pelanggan)
-comment15.text=\r\n\ Method\ untuk\ Men-set\ pelanggan\r\n\ @param\ pengguna\ untuk\ pelanggan\r\n
 comment16.params=pelanggan_awal
 comment16.target=void\ setPenggunaAwal(java.lang.String)
-comment16.text=\r\n\ Method\ untuk\ Men-set\ pelanggan\ awal\r\n\ @param\ pelanggan_awal\ untuk\ pelanggan\ awal\r\n
 comment17.params=pelanggan_akhir
 comment17.target=void\ setPenggunaAkhir(java.lang.String)
-comment17.text=\r\n\ Method\ untuk\ Men-set\ pelanggan\ akhir\r\n\ @param\ pelanggan_akhir\ untuk\ pelanggan\ akhir\r\n
 comment18.params=biaya
 comment18.target=void\ setBiaya(double)
-comment18.text=\r\n\ Method\ untuk\ Men-set\ biaya\r\n\ @param\ biaya\ untuk\ biaya\r\n
 comment19.params=layanan
 comment19.target=void\ setTipeLayanan(TipeLayanan)
-comment19.text=\r\n\ Method\ untuk\ Men-set\ tipe\ layanan\r\n\ @param\ layanan\ untuk\ tipe\ layanan\r\n
 comment2.params=pengguna\ layanan\ lokasi_awal\ lokasi_akhir\ pelanggan_awal\ pelanggan_akhir
 comment2.target=Pesanan(Pelanggan,\ TipeLayanan,\ Lokasi,\ Lokasi,\ java.lang.String,\ java.lang.String)
 comment20.params=lokasi_awal
 comment20.target=void\ setLokasiAwal(Lokasi)
-comment20.text=\r\n\ Method\ untuk\ Men-set\ lokasi\ awal\r\n\ @param\ lokasi_awal\ untuk\ lokasi\ awal\r\n
 comment21.params=lokasi_akhir
 comment21.target=void\ setLokasiAkhir(Lokasi)
-comment21.text=\r\n\ Method\ untuk\ Men-set\ lokasi\ akhir\r\n\ @param\ lokasi_akhir\ untuk\ lokasi\ akhir\r\n
 comment22.params=diproses
-comment22.target=void\ setStatusDiproses(boolean)
-comment22.text=\r\n\ Method\ untuk\ Men-set\ status\ sedang\ diproses\r\n\ @param\ diproses\ untuk\ status\ diproses\r\n
+comment22.target=void\ setStatusDiproses(java.lang.Boolean)
 comment23.params=selesai
-comment23.target=void\ setStatusSelesai(boolean)
-comment23.text=\r\n\ Method\ untuk\ Men-set\ status\ sudah\ selesai\r\n\ @param\ selesai\ untuk\ status\ selesai\r\n
+comment23.target=void\ setStatusSelesai(java.lang.Boolean)
 comment3.params=
 comment3.target=java.lang.String\ toString()
-comment3.text=\r\n\ Method\ untuk\ menampilkan\ data\ pada\ kelas\ Pesanan\r\n
+comment3.text=\r\n\ printData.\ \r\n\ Metode\ untuk\ mencetak\ data\ pesanan.\r\n
 comment4.params=
 comment4.target=boolean\ getStatusDiproses()
-comment4.text=\r\n\ Method\ untuk\ Mendapatkan\ status\ diproses\r\n\ @return\ diproses\ mengembalikan\ nilai\ status\ diproses\r\n
+comment4.text=\r\n\ getStatusPesanan.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ status\ dari\ pesanan\ ketika\ dipanggil.\r\n\ @return\ boolean\ diproses\ \ \ status\ dari\ pesanan.\r\n
 comment5.params=
 comment5.target=boolean\ getStatusSelesai()
-comment5.text=\r\n\ Method\ untuk\ Mendapatkan\ status\ selesai\r\n\ @return\ diproses\ mengembalikan\ nilai\ status\ selesai\r\n
 comment6.params=
 comment6.target=Pelanggan\ getPelanggan()
-comment6.text=\r\n\ Method\ untuk\ Mendapatkan\ pelanggan\r\n\ @return\ pengguna\ \=\ nilai\ pengguna\r\n
+comment6.text=\r\n\ getPelanggan.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ data\ pelanggan\ ketika\ dipanggil.\r\n\ @return\ Pelanggan\ pengguna\ \ \ data\ pelanggan\ yang\ memesan\ pesanan.\r\n
 comment7.params=
 comment7.target=Ojek\ getPelayan()
-comment7.text=\r\n\ Method\ untuk\ Mendapatkan\ ojek\r\n\ @return\ pelayan\ \=\ nilai\ pelayan\ (ojek)\r\n
+comment7.text=\r\n\ getOjek.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ data\ Ojek\ yang\ menjalankan\ pesanan\ ketika\ dipanggil.\r\n\ @return\ Ojek\ pelayan\ \ \ data\ Ojek\ yang\ menjalankan\ pesanan.\r\n
 comment8.params=
 comment8.target=Lokasi\ getLokasiAwal()
-comment8.text=\r\n\ Method\ untuk\ Mendapatkan\ lokasi\ awal\r\n\ @return\ lokasi_awal\ \=\ nilai\ lokasi\ awal\r\n
+comment8.text=\r\n\ getLokasiAwal.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ data\ lokasi\ awal\ dari\ pesanan\ ketika\ dipanggil.\r\n\ @return\ Lokasi\ lokasi_awal\ \ \ data\ lokasi\ awal\ dari\ pesanan\ .\r\n
 comment9.params=
 comment9.target=Lokasi\ getLokasiAkhir()
-comment9.text=\r\n\ Method\ untuk\ Mendapatkan\ lokasi\ akhir\r\n\ @return\ lokasi_akhir\ \=\ nilai\ lokasi\ akhir\r\n
+comment9.text=\r\n\ getLokasiAkhir.\ \r\n\ Metode\ yang\ akan\ mengembalikan\ data\ lokasi\ akhir\ dari\ pesanan\ ketika\ dipanggil.\r\n\ @return\ Lokasi\ lokasi_akhir\ \ \ data\ lokasi\ akhir\ dari\ pesanan\ .\r\n
 numComments=24
