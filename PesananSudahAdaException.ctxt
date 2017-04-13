@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PesananSudahAdaException()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ PesananSudahAdaException\r\n
+comment1.params=pesanan_input
+comment1.target=PesananSudahAdaException(Pesanan)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ PesananSudahAdaException\r\n
+comment2.params=
+comment2.target=java.lang.String\ GetMessage()
+numComments=3

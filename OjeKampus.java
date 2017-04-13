@@ -38,13 +38,13 @@ public class OjeKampus
         //Modul 5 Tugas 4
         System.out.println("\n");
         Lokasi lokasi_ojek1 = new Lokasi("Kutek",03,04,"FT");
-        Ojek ojek1 = new Ojek(1,"Faris", lokasi_ojek1);
+        Ojek ojek1 = new Ojek(DatabaseUser.getIDOjekTerakhir(),"ojek1",lokasi_ojek1);
         DatabaseUser.addOjek(ojek1);
         Lokasi lokasi_ojek2 = new Lokasi("FT",9,11,"Kukel");
-        Ojek ojek2 = new Ojek(2,"Miko", lokasi_ojek2);
+        Ojek ojek2 = new Ojek(DatabaseUser.getIDOjekTerakhir(),"ojek2",lokasi_ojek2);
         DatabaseUser.addOjek(ojek2);
         Lokasi lokasi_ojek3 = new Lokasi("Pusgiwa",8,9,"Depok");
-        Ojek ojek3 = new Ojek(3,"Adam", lokasi_ojek3);
+        Ojek ojek3 = new Ojek(DatabaseUser.getIDOjekTerakhir(),"ojek3",lokasi_ojek3);
         DatabaseUser.addOjek(ojek3);
         Pelanggan pelanggan1 = new Pelanggan(1, "Valda","082211386865");
         DatabaseUser.addPelanggan(pelanggan1);
