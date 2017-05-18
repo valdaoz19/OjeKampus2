@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=OjekGUI()
+comment1.params=click
+comment1.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment2.params=click
+comment2.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment3.params=
+comment3.target=void\ generateMenu()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment5.params=
+comment5.target=void\ run()
+numComments=6

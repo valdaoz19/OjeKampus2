@@ -62,15 +62,17 @@ public class OjeKampus
         Pesanan p1 = new Pesanan(pelangga1,layan1,lokasi1,lokasi2,"pelanggan1");
         Pesanan p2 = new Pesanan(pelangga2,layan2,lokasi2,lokasi3,"pelanggan2");
         Pesanan p3 = new Pesanan(pelangga3,layan3,lokasi3,lokasi1,"pelanggan3");
+        Pesanan p4 = new Pesanan(pelangga1,layan1,lokasi1,lokasi2,"pelanggan1");
 
         try{
          DatabasePesanan.addPesanan(p1);
          DatabasePesanan.addPesanan(p2);
          DatabasePesanan.addPesanan(p3);
          DatabasePesanan.addPesanan(p1);
+         DatabasePesanan.addPesanan(p4);
         }
         catch(PesananSudahAdaException a){
-            System.out.println(a.getMessage());
+            System.out.println(a.GetMessage());
         }
         
 
@@ -90,5 +92,63 @@ public class OjeKampus
         Administrasi.pesananSelesai(pelangga2);
         Administrasi.printAllDatabase();
         
+    }
+    
+     public static void antarBarang()
+    {
+    }
+    
+    public static void antarOrang()
+    {
+    }
+    
+    public static void ojekMembatalkan()
+    {
+    }
+    
+    public static void ojekMengubahStatus()
+    {
+    }
+    
+    public static void pembelianBarang()
+    {
+    }
+    
+    public static void penggunaMembatalkan()
+    {
+    }
+    
+    public static void penggunaMenghapusPesanan()
+    {
+    }
+    
+    public static void penggunaMenyelesaikanPesanan()
+    {
+    }
+    
+    public static void registrasiOjek()
+    {
+    }
+    
+    public static void registrasiPengguna()
+    {
+    }
+    
+    public static void startSistemPengawas(int waktu_cek)
+    {
+        SistemPengawas sistem1 = new SistemPengawas("Pesanan", waktu_cek);
+        sistem1.start();
+    }
+    
+    public static void menungguSistem(int a)
+    {
+        try
+        {
+            Thread.sleep(a);
+        }
+        catch(InterruptedException e)
+        {
+            System.out.println("Thread interrupted.");
+        }
     }
 }

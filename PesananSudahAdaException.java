@@ -28,6 +28,6 @@ public class PesananSudahAdaException extends Exception
 
     public String GetMessage()
     {
-        return super.getMessage() + pesanan_error.getPelanggan().getNama() + " sudah melakukanpemesanan dengan tipe layanan " + pesanan_error.getTipeLayanan();
+        return super.getMessage() + pesanan_error.getPelanggan().getNama() + " sudah melakukan pemesanan dengan tipe layanan " + pesanan_error.getTipeLayanan();
     }
 }
